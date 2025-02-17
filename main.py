@@ -6,7 +6,10 @@ app = Flask(__name__)
 text=""
 @app.route('/')
 def welcome():
-    return render_template('index.html')
+    response = {
+        "message":"Server Running.."
+    }
+    return response
 
 @app.route('/about')
 def about():
