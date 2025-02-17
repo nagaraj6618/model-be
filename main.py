@@ -1,7 +1,7 @@
 from flask import Flask, redirect, url_for, render_template, request,jsonify
 # from werkzeug.exceptions import BadRequest 
 from grammar_model import calculate_weighted_score
-import speech_recognition as sr
+# import speech_recognition as sr
 app = Flask(__name__)
 text=""
 @app.route('/')
@@ -30,18 +30,19 @@ def contact():
 
 @app.route('/getAudio')
 def getAudio():    
-    r = sr.Recognizer()
-    duration = 55
-    with sr.Microphone() as source:
-        audio_data = r.listen(source, timeout=duration)
+    return "Geting Audio.."
+    # r = sr.Recognizer()
+    # duration = 55
+    # with sr.Microphone() as source:
+    #     audio_data = r.listen(source, timeout=duration)
 
-    try:
-        text = r.recognize_google(audio_data)  # Use recognize_google if you want to use the Google API
-        return jsonify({"text": text})
-    except sr.UnknownValueError:
-        return jsonify({"text": "Sorry, couldn't understand the audio"})
-    except sr.RequestError as e:
-        return jsonify({"text": f"Error with request to Google Speech Recognition service: {e}"})
+    # try:
+    #     text = r.recognize_google(audio_data)  # Use recognize_google if you want to use the Google API
+    #     return jsonify({"text": text})
+    # except sr.UnknownValueError:
+    #     return jsonify({"text": "Sorry, couldn't understand the audio"})
+    # except sr.RequestError as e:
+    #     return jsonify({"text": f"Error with request to Google Speech Recognition service: {e}"})
 
 @app.route('/calculate_score', methods=['POST'])
 def calculate_score():
