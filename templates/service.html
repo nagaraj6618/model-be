@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename= 'css/service.css')}}">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="{{ url_for( 'about' ) }}">About</a>
+            <a href="{{ url_for( 'service' ) }}">Service</a>
+            <a href="{{ url_for( 'source' ) }}">Sources</a>
+            <a href="{{ url_for( 'contact' ) }}">Contact</a>
+        </div>
+        <a href="#menu" class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Service Content Section -->
+    <div class="service-section">
+        <h1>Our Service</h1>
+        <p><strong>Focus:</strong> The Service is focused on improving communication skills, particularly for students.</p>
+        <p><strong>Importance:</strong> Proficiency in written and oral communication is essential for both career advancement and academic achievement. But many students find it difficult to acquire these abilities, particularly those who have little access
+            to seminars, individualized learning experiences, and high-quality language materials.</p>
+        <p><strong>AI Technology:</strong> Using cutting-edge artificial intelligence (AI) technology, such as machine learning (ML) and natural language processing (NLP), this offers a comprehensive solution.</p>
+        <p><strong>Main Objective:</strong> The main objective is to remove communication barriers, which have an adverse effect on a maximum of 80 percent of students in learning contexts with limited resources.</p>
+        <p><strong>System Features:</strong> The suggested system offers real-time feedback on spoken and written communication using a blend of deep learning methods and rule-based models. Through the process of examining user input, the system may identify
+            and fix grammatical mistakes, offer suggestions for better pronunciation, and hone speech patterns, all of which contribute to a personalized learning experience for pupils.</p>
+        <p><strong>Overall Goal:</strong> In addition to enhancing students' technical language proficiency,to give them confidence, empower them, and get them ready for difficulties in the classroom and workplace.</p>
+        <p><strong>Outcome:</strong> The system will enable students to improve their speaking, writing, and general communication skills through tailored assistance and feedback, giving them a solid basis for success in both formal and casual contexts.</p>
+    </div>
+
+</body>
+
+</html>

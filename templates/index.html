@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Corrector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="{{ url_for( 'about' ) }}">About</a>
+            <a href="{{ url_for('service')}}">Service</a>
+            <a href="{{ url_for('source') }}">Source</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <a href="#menu" class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="learning-section">
+        <img src="{{url_for('static',filename='images/eduimg2.jpeg') }}" alt="The Best Learning" class="learning-image">
+        <div class="content-box">
+            <div class="button-section">
+                <button class="buttons" id="add_text">
+                    Add my text </button>
+                <button class="buttons" id="add_q">
+                    Get a random Question</button>
+            </div>
+            <div class="content_holder" id="content_holder"></div>
+            
+        </div>
+        <br>
+        <div class="suggest_score">
+            <div class="suggest">
+                <h3>Suggestion: </h3>
+                <p>If any suggestions are given for your sentence it will be displayed in here</p>
+            </div>
+            <div class="score-card">
+                    <h3>Score Card</h3>
+                    <p>Score: 0</p>
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static',filename= 'script/script.js')}}"></script>
+
+</body>
+
+</html>
