@@ -1,11 +1,7 @@
 {
    "builds":[{
       "src":"main.py",
-      "use":"@vercel/python",
-      "commands": [
-      "pip install -r requirements.txt",
-      "python -m spacy download en_core_web_md"
-    ]
+      "use":"@vercel/python"
    }],
    "routes" : [{
       "src":"/(.*)",
