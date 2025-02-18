@@ -2,8 +2,12 @@ from flask import Flask, redirect, url_for, render_template, request,jsonify
 # from werkzeug.exceptions import BadRequest 
 from grammar_model import calculate_weighted_score
 # import speech_recognition as sr
+from flask_cors import CORS
 app = Flask(__name__)
 text=""
+
+CORS(app)
+
 @app.route('/')
 def welcome():
     response = {
